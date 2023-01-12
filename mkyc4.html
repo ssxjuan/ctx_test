@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Centrex : : Web3</title>
+
+        <link rel="stylesheet" href="../../css/styles.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/7.4.1/smooth-scrollbar.css">
+
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    </head>
+
+<body class="dark-bg">
+    <nav class="index-pages">
+
+        <div class="bg"></div>
+        <div class="brand">
+            <img src="images/Brand.png" alt="">
+            <span>Centrex</span>
+        </div>
+
+        <div class="items">
+            <div class="hiddeable">
+                <a class="sub" href="">Earn</a>
+                <a class="sub" href="">Buy Crypto</a>
+                <a class="sub" href="">Sell with Centrex</a>
+            </div>
+
+            <div class="pb">
+            
+                <a class="border-btn" href="">Log out</a>       
+                
+                <img class="mobile-menu" src="images/mbmenu.png">
+            </div>
+        </div>
+
+    </nav>
+
+    <div class="loader">
+		<img src="<?php echo userassets(); ?>custom_theme3/images/Brand Black.png">
+	</div>
+
+    <div id="my-scrollbar" class="structure">
+        <div class="noscroll-container" style="justify-content: center;">
+
+            <form action="" class="kycDocuments">
+
+                <h4>KYC Verification</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, quas eos ducimus beatae neque non!</p>
+
+                <div class="documentType">
+
+                    <button class="btnBorder btnActive" type="id_">ID Card</button>
+                    <button class="btnBorder" type="license_">Driver License</button>
+                    <button class="btnBorder" type="passport_">Passport</button>
+
+                </div>
+
+                <label class="borderLabel" for="front_">Front Side <span>*</span></label>
+                <div class="uploadBox">
+
+                    <div class="bg"></div>
+
+                    <input class="borderUpload" type="file" id="front_" name="front">
+
+                    <div class="info">
+                        <img src="images/document.png">
+                        <div class="text">
+                            <span>Upload your document front side</span>
+                            <p>Be sure your document can be viewed properly</p>
+                        </div>
+                    </div>
+
+                    <button class="btnBorder">Attach File</button>
+
+                </div>
+
+                <label class="borderLabel" for="back_">Back Side <span>*</span></label>
+                <div class="uploadBox">
+
+                    <div class="bg"></div>
+
+                    <input class="borderUpload" type="file" id="back_" name="back">
+                    
+                    <div class="info">
+                        <img src="images/document.png">
+                        <div class="text">
+                            <span>Upload your document front side</span>
+                            <p>Be sure your document can be viewed properly</p>
+                        </div>
+                    </div>
+
+                    <button class="btnBorder">Attach File</button>
+
+                </div>
+
+                <button class="btnBorder" id="submit_">Continue</button>
+
+
+            </form>
+
+        </div>
+    </div>
+    
+    <script src="https://unpkg.com/smooth-scrollbar@8.5.2/dist/smooth-scrollbar.js"></script>
+    
+    <script>
+        const bodyScrollBar = Scrollbar.init(document.querySelector('#my-scrollbar'), { damping: 0.07 });
+
+        $(window).on("load",function(){
+            $('nav').css('margin-top', '100px')
+            $('nav .bg').css('opacity', '100%')
+
+            $('.loader img').css('opacity', '0%')
+            $('.loader').css('opacity', '0%')
+
+            setTimeout(function(){
+                $('.loader').css('z-index', '-1')
+            }, 700)
+
+        })
+    </script>
+
+    <script>
+        $('.documentType button').click(function(e){
+            e.preventDefault()
+
+            if(!$(this).hasClass('btnActive')){
+
+                $('.documentType button').removeClass('btnActive')
+                $(this).addClass('btnActive')
+                $('.documentType').attr('type', $(this).attr('type'))
+
+            }
+
+        })
+
+        $('.uploadBox').on('change', 'input', function(){
+
+            var file = $(this)[0].files[0]
+            var box = $(this).parent()
+
+            box.find('.text span')
+            .text($(this)[0].files[0].name)
+            .css('color', '#C08BFF')
+
+            box.find('.text p').css('display', 'none')
+
+            box.find('button').text('Change')
+
+            if($('#front_').val() && $('#back_').val())
+                $('#submit_').addClass('btnActive')
+            else
+                $('#submit_').removeClass('btnActive')
+                
+        })
+    </script>
+    
+
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Centrex : : Web3</title>
+
+        <link rel="stylesheet" href="../../css/styles.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/7.4.1/smooth-scrollbar.css">
+
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    </head>
+
+<body class="dark-bg">
+    <nav class="index-pages">
+
+        <div class="bg"></div>
+        <div class="brand">
+            <img src="images/Brand.png" alt="">
+            <span>Centrex</span>
+        </div>
+
+        <div class="items">
+            <div class="hiddeable">
+                <a class="sub" href="">Earn</a>
+                <a class="sub" href="">Buy Crypto</a>
+                <a class="sub" href="">Sell with Centrex</a>
+            </div>
+
+            <div class="pb">
+            
+                <a class="border-btn" href="">Log out</a>       
+                
+                <img class="mobile-menu" src="images/mbmenu.png">
+            </div>
+        </div>
+
+    </nav>
+
+    <div class="loader">
+		<img src="<?php echo userassets(); ?>custom_theme3/images/Brand Black.png">
+	</div>
+
+    <div id="my-scrollbar" class="structure">
+        <div class="noscroll-container" style="justify-content: center;">
+            <form action="" class="kycAbout">
+
+                <h4>Tell us about Yourself</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, quas eos ducimus beatae neque non!</p>
+
+                <label class="borderLabel" for="fname_">First Name <span>*</span></label>
+                <input class="borderInput" type="text" id="fname_" autocomplete="off">
+
+                <label class="borderLabel" for="lname_">Last Name <span>*</span></label>
+                <input class="borderInput" type="text" id="lname_" autocomplete="off">
+
+                <div class="birthSelector">
+                
+                    <div class="datePicker">
+
+                        <div class="month">
+
+                            <div class="dateTittle">
+                                <p>Month</p>
+                            </div>
+                            
+
+                            <div class="picker">
+
+                                <span month="01">January</span>
+                                <span month="02">February</span>
+                                <span month="03">March</span>
+                                <span month="04">April</span>
+                                <span month="05">May</span>
+                                <span month="06">June</span>
+                                <span month="07">July</span>
+                                <span month="08">August</span>
+                                <span month="09">September</span>
+                                <span month="10">October</span>
+                                <span month="11">November</span>
+                                <span month="12">December</span>
+                                
+                            </div>
+
+                        </div>
+
+                        <div class="day">
+
+                            <div class="dateTittle">
+                                <img src="images/arrow-bold.png" alt="">
+                                <p>Day</p>
+                            </div>
+
+                            <div class="picker">
+
+                            </div>
+
+                        </div>
+
+                        <div class="year">
+
+                            <div class="dateTittle">
+                                <img src="images/arrow-bold.png" alt="">
+                                <p>Year</p>
+                            </div>
+
+                            <div class="picker">
+
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <label class="borderLabel" for="date_">Birth Date <span>*</span></label>
+                    <div class="dateSelector">
+                        <input class="borderInput" type="text" id="date_" autocomplete="off">
+                        <img src="images/calendar.png">
+                    </div>
+
+                </div>
+
+                <button class="btnBorder" id="submit_">Continue</button>
+
+
+
+            </form>
+            
+            <div class="footer2 d-flex justify-content-center">
+                <p>© 2018-2022 Centrex.ae All Rights Reserved</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://unpkg.com/smooth-scrollbar@8.5.2/dist/smooth-scrollbar.js"></script>
+
+    <script>
+        const bodyScrollBar = Scrollbar.init(document.querySelector('#my-scrollbar'), { damping: 0.07 });
+
+        $(window).on("load",function(){
+            $('nav').css('margin-top', '100px')
+            $('nav .bg').css('opacity', '100%')
+
+            $('.loader img').css('opacity', '0%')
+            $('.loader').css('opacity', '0%')
+
+            setTimeout(function(){
+                $('.loader').css('z-index', '-1')
+            }, 700)
+
+            $('#lname_').on('keydown', function(evt) { //prevent tab
+                if (evt.key === 'Tab') {
+                    evt.preventDefault();
+                    $('#date_').trigger('click');
+                }
+            });
+
+        })
+    </script>
+
+    <script>
+        var month = "", day = "", year = ""
+
+        $('.dateSelector img').click(function(){
+            if($('.datePicker').css('display') == 'none')
+
+                $('.datePicker').css('display', 'flex')
+
+            else
+
+                $('.datePicker').css('display', 'none')
+
+        })
+
+        $('.month').on('click', 'span', function(){
+
+            $('.month').css('display', 'none')
+            $('.datePicker').css({
+                'top': '-230px',
+                'height': '250px'
+            })
+            $('.day').css('display', 'block')
+
+            month = $(this).attr('month')
+            $('.dateSelector input').val(month + day + year) //filling
+
+            switch ($(this).attr('month')){
+                case '01':
+                case '03':
+                case '05':
+                case '07':
+                case '08':
+                case '10':
+                case '12':
+                    for (var i=0; i<32; i++)
+                        $('.day .picker').append("<span day="+ i +">" + i + "</span>")
+                    break;
+
+                case '04':
+                case '06':
+                case '09':
+                case '11':
+                    for (var i=0; i<31; i++)
+                        $('.day .picker').append("<span day="+ i +">" + i + "</span>")
+                    break;
+                    
+                case '02':
+                    for (var i=0; i<30; i++)
+                        $('.day .picker').append("<span day="+ i +">" + i + "</span>")
+                    break;
+
+            }
+        })
+
+        $('.day').on('click', 'span', function(){
+
+            $('.day').css('display', 'none')
+            $('.year').css('display', 'block')
+
+            day = "." + $(this).attr('day')
+            $('.dateSelector input').val(month + day + year) //filling
+
+            for (var i=2010; i>1910; i--)
+                $('.year .picker').append("<span year="+ i +">" + i + "</span>")
+        })
+
+        $('.year').on('click', 'span', function(){
+
+            $('.datePicker').css('display', 'none')
+
+            year = "." + $(this).attr('year')
+            $('.dateSelector input').val(month + day + year) //filling
+
+            if($('#fname_').val() && $('#lname_').val() && $('#date_').val()){
+                $('.btnBorder').addClass('btnActive')
+            } else {
+                $('.btnBorder').removeClass('btnActive')
+            }
+
+        })
+
+        //back
+        $('.dateTittle img').click(function(){
+
+            actualSelect = $(this).parent().parent()
+            if(actualSelect.hasClass('day')){
+
+                actualSelect.css('display', 'none')
+                actualSelect.find('.picker').empty();
+                $('.datePicker').css({
+                    'top': '-160px',
+                    'height': '180px'
+                })
+                $('.month').css('display', 'block')
+            } else {
+                actualSelect.css('display', 'none')
+                $('.day').css('display', 'block')
+            }
+
+        })
+
+        $('.dateSelector input').click(function(){
+            if($('.datePicker').css('display') == 'none')
+
+                $('.datePicker').css('display', 'flex')
+
+            else
+
+                $('.datePicker').css('display', 'none')
+
+        })
+
+        $('.kycAbout input').keyup(function(){
+            if($('#fname_').val() && $('#lname_').val() && $('#date_').val()){
+                $('.btnBorder').addClass('btnActive')
+            } else {
+                $('.btnBorder').removeClass('btnActive')
+            }
+        })
+    </script>
+</body>
+</html>

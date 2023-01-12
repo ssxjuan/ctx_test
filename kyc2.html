@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Centrex : : Web3</title>
+
+        <link rel="stylesheet" href="../../css/styles.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/7.4.1/smooth-scrollbar.css">
+
+    </head>
+
+<body class="dark-bg">
+    <nav class="index-pages">
+
+        <div class="bg"></div>
+        <div class="brand">
+            <img src="images/Brand.png" alt="">
+            <span>Centrex</span>
+        </div>
+
+        <div class="items">
+            <div class="hiddeable">
+                <a class="sub" href="">Earn</a>
+                <a class="sub" href="">Buy Crypto</a>
+                <a class="sub" href="">Sell with Centrex</a>
+            </div>
+
+            <div class="pb">
+            
+                <a class="border-btn" href="">Log out</a>       
+                
+                <img class="mobile-menu" src="images/mbmenu.png">
+            </div>
+        </div>
+
+    </nav>
+
+    <div id="my-scrollbar" class="structure">
+        <div class="noscroll-container" style="justify-content: center; padding-top: 100px;">
+            <form action="" class="kycAddress">
+
+                <div class="notificationBox">
+                    <img src="images/wrong.png">
+
+                    <div class="notificationInfo">
+                        <span>Something went wrong...</span>
+                        <p>Your xxxx is required.</p>
+                    </div>
+                </div>
+
+                <h4>Where are you living?</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, quas eos ducimus beatae neque non!</p>
+
+                <label class="borderLabel" for="country_">Country <span>*</span></label>
+                <div class="borderSelect" name="country" id="country_" value="<?php echo $company_info->incorporation_country; ?>" autocomplete="off">
+                    <?php if($user_info->country != ''){ ?>
+						<span class="" var="<?php echo $user_info->country; ?>"><?php echo getusercountry($user_info->country); ?></span>
+					<?php }else{ ?>
+						<span class="unused">Select</span> 
+					<?php } ?>
+					 <img src="<?php echo userassets(); ?>custom_theme3/images/arrow.png">
+                    <div class="options optionsCountry">
+						<?php foreach ($country as $countries) { ?>
+                        <p var="<?php echo $countries->countries_id; ?>"><?php echo $countries->countryname; ?></p>
+						<?php } ?> 
+                    </div>
+					<input type="hidden" name="country" id="country" value="<?php echo $user_info->country; ?>" />
+                </div>
+                
+                <label class="borderLabel" for="state_">State <span>*</span></label>
+                <div class="borderSelector">
+                    <input type="text" id="state" name="state" value="<?php //echo $user_info->state; ?>">
+                    <div class="options optionsState">
+                    </div>
+                </div>
+
+                <label class="borderLabel" for="city_">City <span>*</span></label>
+                <div class="borderSelector">
+                    <input type="text" name="city" id="city" value="<?php echo $user_info->city; ?>">
+                    <div class="options optionsCity">
+                    </div>
+                </div>
+
+                <label class="borderLabel" for="fname_">Postal Code <span>*</span></label>
+                <input class="borderInput" type="text" id="code_">
+
+                <label class="borderLabel" for="fname_">Address <span>*</span></label>
+                <input class="borderInput" type="text" id="addr_">
+
+                <label class="borderLabel" for="fname_">Landmark <span>*</span></label>
+                <input class="borderInput" type="text" id="mark_">
+
+                <button class="btnBorder" id="submit_">Continue</button>
+            </form>
+
+            <div class="footer2 d-flex justify-content-center">
+                <p>© 2018-2022 Centrex.ae All Rights Reserved</p>
+            </div>
+
+        </div>
+    </div>
+    <div class="loader">
+		<img src="<?php echo userassets(); ?>custom_theme3/images/Brand Black.png">
+	</div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/smooth-scrollbar@8.5.2/dist/smooth-scrollbar.js"></script>
+
+    <script>
+        const bodyScrollBar = Scrollbar.init(document.querySelector('#my-scrollbar'), { damping: 0.07 });
+
+        $(window).on("load",function(){
+            $('nav').css('margin-top', '100px')
+            $('nav .bg').css('opacity', '100%')
+
+            $('.loader img').css('opacity', '0%')
+            $('.loader').css('opacity', '0%')
+
+            setTimeout(function(){
+                $('.loader').css('z-index', '-1')
+            }, 700)
+
+        })
+    </script>
+
+    <script>
+        var actualDrop;
+
+        $('.borderSelector input').focus(function(){ //choices free text
+
+            dropdown = $(this).parent().find('.options')
+            $('.borderSelect, .borderSelector').css('z-index', '1')
+            $(this).parent().css('z-index', '111113')
+
+            $('.options').css('display', 'none')
+            dropdown.css('display', 'block')
+
+            actualDrop = dropdown;
+
+        })
+
+        $('.options').on( 'mousewheel DOMMouseScroll', function ( e ) {
+            var e0 = e.originalEvent,
+                delta = e0.wheelDelta || -e0.detail;
+
+            this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+            e.preventDefault();
+        });
+
+
+        $("body").on('click', function(e) {
+
+            if (!$(e.target).closest(actualDrop).length && !$(e.target).closest('input').length && !$(e.target).closest('.borderSelect').length) {
+                $('.borderSelect img').css('transform', 'rotate(90deg)')
+                $('.options').css('display', 'none')
+            }
+
+        });
+
+        
+    </script>
+
+    <script>
+        $('.borderSelect').click(function(){
+
+            dropdown = $(this).find('.options')
+            $('.borderSelect, .borderSelector').css('z-index', '1')
+            $(this).css('z-index', '111113')
+
+            if(dropdown.css('display') == 'none') {
+
+                $(this).find('img').css('transform', 'rotate(-90deg)')
+                $('.options').css('display', 'none')
+                dropdown.css('display', 'block')
+                
+            }
+            else {
+
+                $('.borderSelect img').css('transform', 'rotate(90deg)')
+                $('.options').css('display', 'none')
+
+            }
+                
+        })
+
+        $('.options p').click(function(){
+
+            var old = $(this).parent().parent();
+
+            if(old.hasClass('borderSelector')){
+
+                old.find('input').val($(this).text())
+                old.find('input').attr('var', $(this).attr('var'))
+                $('.options').css('display', 'none')
+
+            } else { //remove this prox
+
+                old.find('span').text($(this).text())
+                old.find('span').attr('var', $(this).attr('var')) //get var from option, put in the selected span
+                old.find('span').removeClass('unused')
+
+            }
+
+            if($('#code_').val() && $('#mark_').val() && $('#addr_').val() && !$('#country_ span').hasClass('unused') && !$('#city_ span').hasClass('unused') && !$('#state_ span').hasClass('unused')){
+                $('.btnBorder').addClass('btnActive')
+            } else {
+                $('.btnBorder').removeClass('btnActive')
+            }
+        })
+
+        
+        $('.kycAddress input').keyup(function(){
+            if($('#code_').val() && $('#mark_').val() && $('#addr_').val() && !$('#country_ span').hasClass('unused') && !$('#city_ span').hasClass('unused') && !$('#state_ span').hasClass('unused')){
+                $('.btnBorder').addClass('btnActive')
+            } else {
+                $('.btnBorder').removeClass('btnActive')
+            }
+        })
+    </script>
+
+
+</body>
+</html>

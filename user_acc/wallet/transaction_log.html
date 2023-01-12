@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <link rel="stylesheet" href="../../css/styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    </head>
+<body>
+    <nav class="navbar navbar-expand-lg justify-content-between">
+        <a href="" class="navbar-brand">
+            <img src="../../images/Brand Black.png">
+        </a>
+        <div class="d-flex mid-nav">
+            <img src="../../images/mobile-menu.svg" class="mobile-menu d-lg-none d-xl-none">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a href="" class="nav-link dropdown-toggle">Buy Crypto</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li onclick="window.location.href=''" class="d-flex justify-content-between">
+                            <div class="left">
+                                <a href="/">Buy Cryptocurrencies</a>
+                                <p>Secure Trade</p>
+                            </div>
+                            <div class="right">
+                                <img src="../../images/arrow-right.svg">
+                            </div>
+                        </li>
+                        <li onclick="window.location.href=''" class="d-flex justify-content-between">
+                            <div class="left">
+                                <a href="/">Sell Cryptocurrencies</a>
+                                <p>Secure Payment</p>
+                            </div>
+                            <div class="right">
+                                <img src="../../images/arrow-right.svg">
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="" class="nav-link dropdown-toggle">Earn</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li onclick="window.location.href=''" class="d-flex justify-content-between">
+                            <div class="left">
+                                <a href="/">Stake Crypto</a>
+                                <p>Up to 125% APY</p>
+                            </div>
+                            <div class="right">
+                                <img src="../../images/arrow-right.svg">
+                            </div>
+                        </li>
+                        <li onclick="window.location.href=''" class="d-flex justify-content-between">
+                            <div class="left">
+                                <a href="/">My Investments</a>
+                                <p>Manage your Earnings</p>
+                            </div>
+                            <div class="right">
+                                <img src="../../images/arrow-right.svg">
+                            </div>
+                        </li>
+                        <li onclick="window.location.href=''" class="d-flex justify-content-between">
+                            <div class="left">
+                                <a href="/">Returns History</a>
+                                <p>Check your Profits</p>
+                            </div>
+                            <div class="right">
+                                <img src="../../images/arrow-right.svg">
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="" class="nav-link dropdown-toggle">Watchlist and News</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li onclick="window.location.href=''" class="d-flex justify-content-between">
+                            <div class="left">
+                                <a href="/">My Watchlist</a>
+                                <p>Followed Cryptos</p>
+                            </div>
+                            <div class="right">
+                                <img src="../../images/arrow-right.svg">
+                            </div>
+                        </li>
+                        <li onclick="window.location.href=''" class="d-flex justify-content-between">
+                            <div class="left">
+                                <a href="/">News</a>
+                                <p>Market News</p>
+                            </div>
+                            <div class="right">
+                                <img src="../../images/arrow-right.svg">
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown hide-on-desk">
+                    <a href="" class="nav-link dropdown-toggle">Wallet</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li onclick="window.location.href=''" class="d-flex justify-content-between">
+                            <div class="left">
+                                <a href="/">My Wallet</a>
+                                <p>Overview</p>
+                            </div>
+                            <div class="right">
+                                <img src="../../images/arrow-right.svg">
+                            </div>
+                        </li>
+                        <li onclick="window.location.href=''" class="d-flex justify-content-between">
+                            <div class="left">
+                                <a href="/">Deposit</a>
+                                <p>Secure Deposit</p>
+                            </div>
+                            <div class="right">
+                                <img src="../../images/arrow-right.svg">
+                            </div>
+                        </li>
+                        <li onclick="window.location.href=''" class="d-flex justify-content-between">
+                            <div class="left">
+                                <a href="/">Withdraw</a>
+                                <p>Fast Withdraw</p>
+                            </div>
+                            <div class="right">
+                                <img src="../../images/arrow-right.svg">
+                            </div>
+                        </li>
+                        <li onclick="window.location.href=''" class="d-flex justify-content-between">
+                            <div class="left">
+                                <a href="/">Swap</a>
+                                <p>Swap your Cryptos</p>
+                            </div>
+                            <div class="right">
+                                <img src="../../images/arrow-right.svg">
+                            </div>
+                        </li>
+                        <li onclick="window.location.href=''" class="d-flex justify-content-between">
+                            <div class="left">
+                                <a href="/">Transactions History</a>
+                                <p>Check all Transactions</p>
+                            </div>
+                            <div class="right">
+                                <img src="../../images/arrow-right.svg">
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown hide-on-desk">
+                    <a href="" class="nav-link dropdown-toggle">
+                        My Account
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li onclick="window.location.href=''" class="d-flex justify-content-between">
+                            <div class="left">
+                                <a href="/">Settings & Preferences</a>
+                                <p>Account Management</p>
+                            </div>
+                            <div class="right">
+                                <img src="../../images/arrow-right.svg">
+                            </div>
+                        </li>
+                        <li onclick="window.location.href=''" class="d-flex justify-content-between">
+                            <div class="left">
+                                <a href="/">Account Security</a>
+                                <p>Manage your Security</p>
+                            </div>
+                            <div class="right">
+                                <img src="../../images/arrow-right.svg">
+                            </div>
+                        </li>
+                        <li onclick="window.location.href=''" class="d-flex justify-content-between">
+                            <div class="left">
+                                <a href="/">Help & Support</a>
+                                <p>Get Help</p>
+                            </div>
+                            <div class="right">
+                                <img src="../../images/arrow-right.svg">
+                            </div>
+                        </li>
+                        <li onclick="window.location.href=''" class="d-flex justify-content-between">
+                            <div class="left">
+                                <a href="/">Log Out</a>
+                                <p>Good Bye!</p>
+                            </div>
+                            <div class="right">
+                                <img src="../../images/arrow-right.svg">
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="d-flex right-nav-box d-none d-lg-block d-xl-block">
+            <ul class="navbar-nav right-nav">
+                <li class="nav-item dropdown">
+                    <a href="" class="nav-link dropdown-toggle">Wallet</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li onclick="window.location.href=''" class="d-flex justify-content-between">
+                            <div class="left">
+                                <a href="/">My Wallet</a>
+                                <p>Overview</p>
+                            </div>
+                            <div class="right">
+                                <img src="../../images/arrow-right.svg">
+                            </div>
+                        </li>
+                        <li onclick="window.location.href=''" class="d-flex justify-content-between">
+                            <div class="left">
+                                <a href="/">Deposit</a>
+                                <p>Secure Deposit</p>
+                            </div>
+                            <div class="right">
+                                <img src="../../images/arrow-right.svg">
+                            </div>
+                        </li>
+                        <li onclick="window.location.href=''" class="d-flex justify-content-between">
+                            <div class="left">
+                                <a href="/">Withdraw</a>
+                                <p>Fast Withdraw</p>
+                            </div>
+                            <div class="right">
+                                <img src="../../images/arrow-right.svg">
+                            </div>
+                        </li>
+                        <li onclick="window.location.href=''" class="d-flex justify-content-between">
+                            <div class="left">
+                                <a href="/">Swap</a>
+                                <p>Swap your Cryptos</p>
+                            </div>
+                            <div class="right">
+                                <img src="../../images/arrow-right.svg">
+                            </div>
+                        </li>
+                        <li onclick="window.location.href=''" class="d-flex justify-content-between">
+                            <div class="left">
+                                <a href="/">Transactions History</a>
+                                <p>Check all Transactions</p>
+                            </div>
+                            <div class="right">
+                                <img src="../../images/arrow-right.svg">
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown no-arrow">
+                    <a href="" class="nav-link dropdown-toggle">
+                        <img src="../../images/user.png">
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li onclick="window.location.href=''" class="d-flex justify-content-between">
+                            <div class="left">
+                                <a href="/">Settings & Preferences</a>
+                                <p>Account Management</p>
+                            </div>
+                            <div class="right">
+                                <img src="../../images/arrow-right.svg">
+                            </div>
+                        </li>
+                        <li onclick="window.location.href=''" class="d-flex justify-content-between">
+                            <div class="left">
+                                <a href="/">Account Security</a>
+                                <p>Manage your Security</p>
+                            </div>
+                            <div class="right">
+                                <img src="../../images/arrow-right.svg">
+                            </div>
+                        </li>
+                        <li onclick="window.location.href=''" class="d-flex justify-content-between">
+                            <div class="left">
+                                <a href="/">Help & Support</a>
+                                <p>Get Help</p>
+                            </div>
+                            <div class="right">
+                                <img src="../../images/arrow-right.svg">
+                            </div>
+                        </li>
+                        <li onclick="window.location.href=''" class="d-flex justify-content-between">
+                            <div class="left">
+                                <a href="/">Log Out</a>
+                                <p>Good Bye!</p>
+                            </div>
+                            <div class="right">
+                                <img src="../../images/arrow-right.svg">
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="vertical-navbar shadow-mm">
+        <div class="current-section">
+            <h6>My Wallet</h6>
+        </div>
+        <div class="sub-pages">
+            <ul>
+                <li>
+                    <a href="" class="current-page">Overview</a>
+                </li>
+                <li>
+                    <a href="">Deposit</a>
+                </li>
+                <li>
+                    <a href="">Withdraw</a>
+                </li>
+                <li>
+                    <a href="">Convert</a>
+                </li>
+                <li>
+                    <a href="">Transactions History</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- Mobile -->
+    <div class="horizontal-phone-navbar">
+        <ul>
+            <li>
+                <a href="" class="current-page">Overview</a>
+            </li>
+            <li>
+                <a href="">Deposit</a>
+            </li>
+            <li>
+                <a href="">Withdraw</a>
+            </li>
+            <li>
+                <a href="">Convert</a>
+            </li>
+            <li>
+                <a href="">Transactions History</a>
+            </li>
+        </ul>
+    </div>
+    <div class="container d-flex justify-content-center trans-co">
+        <div class="transfers-container d-flex">
+            <span class="mb-3">Tranfers History</span>
+            <div class="filterby">
+                <div class="selected_filter">
+                    <p>Filter by: <span>Date</span> <img src="../../images/arrow-right.svg"></p>
+                </div>
+                <div class="choices_filter shadow-sm">
+                    <p>DD</p>
+                    <p>Date</p>
+                    <p>Date</p>
+                    <p>Date</p>
+                    <p>Date</p>
+                </div>
+            </div>
+            <table class="transfers-table-log"> <!-- Map -->
+                <tr class="table-sections">
+                    <td>Crypto</td>
+                    <td>Symbol</td>
+                    <td>Action</td>
+                    <td>Date</td>
+                    <td>Amount</td>
+                </tr>
+                <tr>
+                    <td><img src="../../images/usdtlogo.png">Bitcoin</td>
+                    <td>BTC</td>
+                    <td>Received</td>
+                    <td>06.06.22 - 09:02PM</td>
+                    <td class="received">+0.3425</td>
+                </tr>
+                <tr>
+                    <td><img src="../../images/usdtlogo.png">Bitcoin</td>
+                    <td>BTC</td>
+                    <td>Received</td>
+                    <td>06.06.22 - 09:02PM</td>
+                    <td class="sent">-0.3425</td>
+                </tr>
+                <tr>
+                    <td><img src="../../images/usdtlogo.png">Bitcoin</td>
+                    <td>BTC</td>
+                    <td>Received</td>
+                    <td>06.06.22 - 09:02PM</td>
+                    <td class="received">+0.3425</td>
+                </tr>
+                <tr>
+                    <td><img src="../../images/usdtlogo.png">Bitcoin</td>
+                    <td>BTC</td>
+                    <td>Received</td>
+                    <td>06.06.22 - 09:02PM</td>
+                    <td class="sent">-0.3425</td>
+                </tr>
+                <tr>
+                    <td><img src="../../images/usdtlogo.png">Bitcoin</td>
+                    <td>BTC</td>
+                    <td>Received</td>
+                    <td>06.06.22 - 09:02PM</td>
+                    <td class="sent">-0.3425</td>
+                </tr>
+                <tr>
+                    <td><img src="../../images/usdtlogo.png">Bitcoin</td>
+                    <td>BTC</td>
+                    <td>Received</td>
+                    <td>06.06.22 - 09:02PM</td>
+                    <td class="received">+0.3425</td>
+                </tr>
+                <tr>
+                    <td><img src="../../images/usdtlogo.png">Bitcoin</td>
+                    <td>BTC</td>
+                    <td>Received</td>
+                    <td>06.06.22 - 09:02PM</td>
+                    <td class="sent">-0.3425</td>
+                </tr>
+                <tr>
+                    <td><img src="../../images/usdtlogo.png">Bitcoin</td>
+                    <td>BTC</td>
+                    <td>Received</td>
+                    <td>06.06.22 - 09:02PM</td>
+                    <td class="received">+0.3425</td>
+                </tr>
+                <tr>
+                    <td><img src="../../images/usdtlogo.png">Bitcoin</td>
+                    <td>BTC</td>
+                    <td>Received</td>
+                    <td>06.06.22 - 09:02PM</td>
+                    <td class="sent">-0.3425</td>
+                </tr>
+                <tr>
+                    <td><img src="../../images/usdtlogo.png">Bitcoin</td>
+                    <td>BTC</td>
+                    <td>Received</td>
+                    <td>06.06.22 - 09:02PM</td>
+                    <td class="received">+0.3425</td>
+                </tr>
+                <tr>
+                    <td><img src="../../images/usdtlogo.png">Bitcoin</td>
+                    <td>BTC</td>
+                    <td>Received</td>
+                    <td>06.06.22 - 09:02PM</td>
+                    <td class="sent">-0.3425</td>
+                </tr>
+                <tr>
+                    <td><img src="../../images/usdtlogo.png">Bitcoin</td>
+                    <td>BTC</td>
+                    <td>Received</td>
+                    <td>06.06.22 - 09:02PM</td>
+                    <td class="received">+0.3425</td>
+                </tr>
+                <tr>
+                    <td><img src="../../images/usdtlogo.png">Bitcoin</td>
+                    <td>BTC</td>
+                    <td>Received</td>
+                    <td>06.06.22 - 09:02PM</td>
+                    <td class="sent">-0.3425</td>
+                </tr>
+                <tr>
+                    <td><img src="../../images/usdtlogo.png">Bitcoin</td>
+                    <td>BTC</td>
+                    <td>Received</td>
+                    <td>06.06.22 - 09:02PM</td>
+                    <td class="received">+0.3425</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+        last_opened = "";
+        mobile_menu = false;
+
+        $('.mobile-menu').click(function(){
+            if(mobile_menu == false){
+                $('.navbar-nav').css("display", "block")
+                $(this).attr("src", "../../images/close.svg")
+                mobile_menu = true;
+            } else {
+                $('.navbar-nav').css("display", "none")
+                $(this).attr("src", "../../images/mobile-menu.svg")
+                mobile_menu = false;
+            }
+        })
+        $('.dropdown').click(function(e){
+            e.preventDefault();
+            if($(window).width() <= 991){
+                $('.dropdown .dropdown-menu').css("display", "none")
+                $('.dropdown').css("margin-bottom", "0px")
+                $(this).children('.dropdown-menu').css("display", "block")
+                $(this).css("margin-bottom", $(this).children('.dropdown-menu').children().length*50 + "px")
+                if($(this).children('.dropdown-menu').children().length == last_opened){
+                    $('.dropdown .dropdown-menu').css("display", "none")
+                    $('.dropdown').css("margin-bottom", "0px")
+                    last_opened = ""
+                } else {
+                    last_opened = $(this).children('.dropdown-menu').children().length
+                }
+            }
+        })
+        $(window).on('resize', function(){
+            if($(this).width() > 991){
+                $('.navbar-nav').css("display", "flex")
+                $('.dropdown .dropdown-menu').css("display", "none")
+                $('.dropdown').css("margin-bottom", "0px")
+                mobile_menu=false;
+                $('.mobile-menu').attr("src", "../../images/mobile-menu.svg")
+            } else {
+                $('.navbar-nav').css("display", "none")
+            }
+        })
+        $('.dropdown').mouseover(function(){
+            if($(window).width() >= 992){
+                $(this).children('.dropdown-menu').css({
+                    'display': 'block',
+                    'margin' : '0px',
+                    'margin-top' : '10px'
+                })
+            }
+        }).mouseleave(function(){
+            if($(window).width() >= 992){
+                $(this).children('.dropdown-menu').css({
+                    'display': 'none',
+                })
+            }
+            
+        })
+    </script>
+
+    <script>
+        $('.selected_filter').click(function(){
+            
+            options = $(this).parent().find('.choices_filter')
+
+            if(options.css('display') == 'none'){
+
+                options.css('display', 'block')
+                $(this).find('img').css('transform', 'rotate(-90deg)')
+
+            } else {
+
+                options.css('display', 'none')
+                $(this).find('img').css('transform', 'rotate(90deg)')
+
+            }
+        })
+
+        $('.choices_filter p').click(function(){
+
+            selected = $(this).parent().parent().find('.selected_filter')
+
+            $(this).parent().css('display', 'none')
+
+            selected.find('img').css('transform', 'rotate(90deg)')
+
+            selected.find('p').html('Filter by: <span>' + $(this).text() + '</span> <img src="../../images/arrow-right.svg">')
+        })
+    </script>
+</body>
+</html>
